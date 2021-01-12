@@ -34,6 +34,9 @@ export default class YarnCommand extends BaseCommand {
   @Command.Boolean(`--ignore-engines`, {hidden: true})
   ignoreEngines?: boolean;
 
+  @Command.String(`--network-timeout`, {description: `Deprecated, has no effect`})
+  networkTimeout?: string;
+
   @Command.String(`--registry`, {hidden: true})
   registry?: string;
 
