@@ -163,7 +163,7 @@ export default class YarnCommand extends BaseCommand {
     // let someone implement this "resolver-that-reads-the-cache" logic.
     if (typeof this.preferOffline !== `undefined`) {
       const exitCode = await reportDeprecation(`The --prefer-offline flag is deprecated; use the --cached flag with 'yarn add' instead`, {
-        error: !isZeitNow,
+        error: false,
       });
 
       if (exitCode !== null) {
