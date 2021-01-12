@@ -189,7 +189,7 @@ export default class YarnCommand extends BaseCommand {
     // to this flag at the moment.
     if (typeof this.nonInteractive !== `undefined`) {
       const exitCode = await reportDeprecation(`The --non-interactive option is deprecated`, {
-        error: !isGCP,
+        error: false,
       });
 
       if (exitCode !== null) {
